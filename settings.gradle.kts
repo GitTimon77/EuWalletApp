@@ -5,10 +5,20 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+
+    // (A) Direkt festnageln
     plugins {
         id("com.android.application") version "8.11.1"
         id("com.android.library") version "8.11.1"
-        // ggf. weitere Android-Plugins ebenfalls auf 8.11.1
+    }
+
+    // (B) Sicherheitshalber auch erzwingen
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.namespace == "com.android") {
+                useVersion("8.11.1")
+            }
+        }
     }
 }
 
