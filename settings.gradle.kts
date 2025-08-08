@@ -8,8 +8,7 @@ pluginManagement {
     plugins {
         id("com.android.application") version "8.11.1"
         id("com.android.library") version "8.11.1"
-        // Falls ihr kotlin-plugins nutzt, lasst deren Version wie bisher
-        // (oder setzt sie hier ebenfalls explizit, wenn ihr sie zentral steuern wollt)
+        // ggf. weitere Android-Plugins ebenfalls auf 8.11.1
     }
 }
 
